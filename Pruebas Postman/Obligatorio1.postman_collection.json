@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "8fdfed4a-dfa3-4b03-b111-d436ffd746fa",
+		"name": "Obligatorio1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Put new password",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5074/api/users/juli456?newPassword=juliet12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5074",
+					"path": [
+						"api",
+						"users",
+						"juli456"
+					],
+					"query": [
+						{
+							"key": "newPassword",
+							"value": "juliet12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5074/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5074",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Not Valid Email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"Nombre1\",\r\n        \"LastName\": \"Apellido1\",\r\n        \"UserName\": \"nombre12\",\r\n        \"Password\": \"123456\",\r\n        \"Role\": \"Admin\",\r\n        \"Email\": \"nombre@gmail.com\",\r\n        \"Articles\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5074/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5074",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put new username",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5074/api/users/userName/julisa12?newUsername=juan134",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5074",
+					"path": [
+						"api",
+						"users",
+						"userName",
+						"julisa12"
+					],
+					"query": [
+						{
+							"key": "newUsername",
+							"value": "juan134"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get articles byName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5074/api/articles/byName/juan134",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5074",
+					"path": [
+						"api",
+						"articles",
+						"byName",
+						"juan134"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
